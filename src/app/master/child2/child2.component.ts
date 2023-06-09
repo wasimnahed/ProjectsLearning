@@ -9,19 +9,18 @@ import { DataService } from 'src/app/services/data.service';
 export class Child2Component implements OnInit {
   childList: string[] = []
   inputText!: string;
-  constructor(private dataService:DataService) { }
+  constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
-    // this.message=this.shared.getMessage();
-this.dataService.dataEmitter.subscribe((values) =>{
-  this.inputText=values;
-  // console.log(this.inputText);
-  this.childList.push(this.inputText);
-  
-})
-   
+    this.dataService.dataEmitter.subscribe((values) => {
+      this.inputText = values;
+      // console.log(this.inputText);
+      this.childList.push(this.inputText);
+
+    })
+
   }
- 
+
 
 
 

@@ -29,7 +29,4 @@ export class Child1Component implements OnInit {
     this.foodEvt.emit(value);
   }
 
-
-
-
 }

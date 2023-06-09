@@ -7,7 +7,6 @@ import { Child2Component } from './child2/child2.component';
 import { MasterComponent } from './master.component';
 import { FormsModule } from '@angular/forms';
 
-
 @NgModule({
   declarations: [
     Child1Component,
