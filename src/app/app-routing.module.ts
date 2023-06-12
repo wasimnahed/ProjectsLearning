@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LocalComponent } from './local/local.component';
 import { AuthGuard } from './guard/auth.guard';
-import { TodoComponent } from './todo/todo.component';
+import { PopupComponent } from './popup/popup.component';
 const routes: Routes = [
   {
     path: 'master', canActivate:[AuthGuard],
@@ -14,8 +14,8 @@ const routes: Routes = [
   },
 
   {
-    path:'todo',
-    component:TodoComponent
+    path:'popup',
+    component:PopupComponent
   }
 ];
 

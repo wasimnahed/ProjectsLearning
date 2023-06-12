@@ -1,6 +1,50 @@
+// import { Component, OnInit } from '@angular/core';
+// import { MatDialog } from '@angular/material/dialog';
+// import { PopupComponent } from '../popup/popup.component';
+
+// @Component({
+//   selector: 'app-todo',
+//   templateUrl: './todo.component.html',
+//   styleUrls: ['./todo.component.css']
+// })
+// export class TodoComponent implements OnInit {
+
+//   constructor(private dialog: MatDialog,) { }
+
+//   ngOnInit(): void {
+//   }
+
+
+//   Openpopup() {
+//     var popup = this.dialog.open(PopupComponent, {
+//       height: 'auto',
+//       width: '963px',
+//       //  panelClass: 'ManualLogHoursModal',
+//       disableClose: true,
+//       data: {
+//         title: 'user data'
+//       }
+
+//     });
+//     popup.afterClosed().subscribe(item => {
+//       console.log(item);
+
+//     })
+
+//   }
+
+// }
+
+
+
+
+
+
+
+
 import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
-import { PopupComponent } from '../popup/popup.component';
+import { Inject } from '@angular/core';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-todo',
@@ -8,28 +52,37 @@ import { PopupComponent } from '../popup/popup.component';
   styleUrls: ['./todo.component.css']
 })
 export class TodoComponent implements OnInit {
+  inputdata: any;
+  closemessage = 'closed using directive'
+  list: any[] = [];
 
-  constructor(private dialog: MatDialog,) { }
+
+  constructor( @Inject(MAT_DIALOG_DATA) public data: any,
+  private ref: MatDialogRef<TodoComponent>) { }
 
   ngOnInit(): void {
+    this.inputdata = this.data;
   }
 
+  closepopup() {
+    this.ref.close('close using function');
+  }
 
-  Openpopup() {
-    var popup = this.dialog.open(PopupComponent, {
-      height: 'auto',
-      width: '963px',
-      //  panelClass: 'ManualLogHoursModal',
-      disableClose: true,
-      data: {
-        title: 'user data'
-      }
-
+  addTask(item: string) {
+    // console.log(item);
+    this.list.push({
+      id: this.list.length,
+      name: item
     });
-    popup.afterClosed().subscribe(item => {
-      console.log(item);
+    console.log(this.list);
 
-    })
+  }
+
+  dltname(index: number) {
+    if (index > -1) {
+      this.list.splice(index, 1);
+    }
+    console.log(this.list);
 
   }
 
