@@ -9,37 +9,28 @@ import { MatDialogModule, MatDialogRef,MAT_DIALOG_DATA } from '@angular/material
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
-import { DialogComponent } from './dialog/dialog.component';
 import { MatListModule } from '@angular/material/list';
+import { PopupComponent } from './popup/popup.component';
 import { TodoComponent } from './todo/todo.component';
-
-// import {MdDialog, MdDialogRef} from '@angular/material'
-
-// import { RouterModule } from '@angular/router';
 @NgModule({
   declarations: [
     AppComponent,
-    // DialogOverviewExampleDialog,
     LocalComponent,
-    DialogComponent,
+    PopupComponent,
     TodoComponent,
   ],
   entryComponents: [
-// DialogOverviewExampleDialog,
 ],
   imports: [
     FormsModule,
     BrowserModule,
     AppRoutingModule,
-    // MasterModule,
     BrowserAnimationsModule,
     MatDialogModule,
     MatButtonModule,
     MatIconModule,
     MatInputModule,
     MatListModule,
-    
-  
   ],
   providers: [
     { provide: MAT_DIALOG_DATA, useValue: {} },

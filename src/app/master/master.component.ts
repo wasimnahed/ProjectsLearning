@@ -19,13 +19,6 @@ export class MasterComponent implements OnInit {
     this.heroList.push(this.heroName)
   }
 
-
-
-
-
-
-
-
   afterFoofAdd(food: string) {
     this.foods.push(food)
 
