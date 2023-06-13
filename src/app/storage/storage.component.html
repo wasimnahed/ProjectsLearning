@@ -1,0 +1,16 @@
+<!-- <ul>
+    <li *ngFor=" let item of nm">
+        <p>
+            {{item}}
+        </p>
+    </li>
+</ul> -->
+<button (click)="storage()">Storage</button> &nbsp;&nbsp;
+<button (click)="display()">Display</button>
+<ul>
+    <li *ngFor=" let item of msg?.list">
+<p>
+    {{item.id}} {{item.body}}
+</p>
+    </li>
+</ul>

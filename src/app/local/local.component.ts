@@ -8,9 +8,13 @@ import { DataService } from '../services/data.service';
 })
 export class LocalComponent implements OnInit {
   local!: string;
-  constructor(private localData: DataService) { }
+  // name: string;
+  constructor(private localData: DataService) { 
+    // this.name = 'John Doe'; 
+  }
 
   ngOnInit(): void {
+    // this.name = 'John Doe'; 
   }
 
   addtolocal(data: string) {
