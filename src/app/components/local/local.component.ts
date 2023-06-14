@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../services/data.service';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-local',
@@ -14,8 +14,10 @@ export class LocalComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // this.name = 'John Doe'; 
+
   }
+
+ 
 
   addtolocal(data: string) {
     this.localData.addtolocal('key', data);
