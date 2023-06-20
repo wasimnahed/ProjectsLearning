@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl,FormGroup, Validators} from '@angular/forms';
+import {FormBuilder, FormControl,FormGroup, Validators} from '@angular/forms';
 @Component({
   selector: 'app-r-login',
   templateUrl: './r-login.component.html',
@@ -7,18 +7,23 @@ import {FormControl,FormGroup, Validators} from '@angular/forms';
 })
 export class RLoginComponent implements OnInit {
 
-  constructor() { }
+  loginForm:FormGroup;
+  constructor(private builder:FormBuilder) { }
+
+
 
   ngOnInit(): void {
-    this.loginForm.setValue({name:'wasim', email:'wasim@gmail.com', password:'12345678'})
+    // this.loginForm.setValue({name:'wasim', email:'wasim@gmail.com', password:'12345678'})
+
+    
+ this.loginForm= this.builder.group({
+    name:new FormControl('wasim',Validators.required),
+    email:new FormControl('wasim@gmail.com',Validators.required),
+    password:new FormControl('12345678',Validators.required)
+  })
   }
 
 
-  loginForm= new FormGroup({
-    name:new FormControl('',Validators.required),
-    email:new FormControl('',Validators.required),
-    password:new FormControl('',Validators.required)
-  })
 
   loginUser(){
     console.log(this.loginForm.value);
