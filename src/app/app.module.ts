@@ -12,7 +12,6 @@ import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
 import { PopupComponent } from './components/popup/popup.component';
 import { TodoComponent } from './components/todo/todo.component';
-import { StorageComponent } from './components/storage/storage.component';
 import { SessionComponent } from './components/session/session.component';
 import { RLoginComponent } from './components/r-login/r-login.component';
 import { TLoginComponent } from './components/t-login/t-login.component';
@@ -27,6 +26,10 @@ import { ContactlistComponent } from './components/contactlist/contactlist.compo
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatCardModule } from '@angular/material/card';
 import { PasswordConfirmpasswordComponent } from './components/password-confirmpassword/password-confirmpassword.component';
+import { Child1Component } from './components/child1/child1.component';
+import { Child2Component } from './components/parent1/child2.component';
+
+
 // import { MatCardContactModule } from '@angular/material/card';
 
 
@@ -36,7 +39,6 @@ import { PasswordConfirmpasswordComponent } from './components/password-confirmp
     LocalComponent,
     PopupComponent,
     TodoComponent,
-    StorageComponent,
     SessionComponent,
     RLoginComponent,
     TLoginComponent,
@@ -48,6 +50,10 @@ import { PasswordConfirmpasswordComponent } from './components/password-confirmp
     ContactComponent,
     ContactlistComponent,
     PasswordConfirmpasswordComponent,
+    Child1Component,
+    Child2Component,
+  
+    
   
     
   

@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { LocalComponent } from './components/local/local.component';
 import { AuthGuard } from './guard/auth.guard';
 import { PopupComponent } from './components/popup/popup.component';
-import { StorageComponent } from './components/storage/storage.component';
 import { SessionComponent } from './components/session/session.component';
 import { RLoginComponent } from './components/r-login/r-login.component';
 import { TLoginComponent } from './components/t-login/t-login.component';
@@ -13,6 +12,8 @@ import { TutorialDetailsComponent } from './components/tutorial-details/tutorial
 import { AddTutorialComponent } from './components/add-tutorial/add-tutorial.component';
 import { PasswordConfirmpasswordComponent } from './components/password-confirmpassword/password-confirmpassword.component';
 import { TakeUntilComponent } from './Observable-operators/take-until/take-until.component';
+import { Child2Component } from './components/parent1/child2.component';
+
 const routes: Routes = [
   {
     path: 'master', canActivate: [AuthGuard],
@@ -26,12 +27,6 @@ const routes: Routes = [
   {
     path: 'popup',
     component: PopupComponent
-  },
-
-  {
-    path: 'storage',
-    component: StorageComponent
-
   },
   {
     path: 'session',
@@ -65,12 +60,15 @@ const routes: Routes = [
     path: 'password-confirmpassword',
     component:PasswordConfirmpasswordComponent
   },
-
-
   {
     path:'take-until',
     component:TakeUntilComponent
-  }
+  },
+  {
+    path:'child2',
+    component:Child2Component
+  },
+
 
 ];
 

@@ -18,6 +18,9 @@ export class TakeUntilComponent implements OnInit, OnDestroy {
       console.log(count);
       this.count = count;
     });
+    setTimeout(() => {
+      this.stop();
+    }, 5000);
   }
 
   stop(): void {
