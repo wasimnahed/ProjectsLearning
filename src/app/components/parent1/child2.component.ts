@@ -6,28 +6,34 @@ import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
   styleUrls: ['./child2.component.css']
 })
 export class Child2Component implements OnInit {
+ 
   parentForm: FormGroup;
   genderOptions: string[] = ['Male', 'Female', 'Other'];
   showChild: boolean = false;
+  submittedData: any;
+ 
   constructor(private formBuilder: FormBuilder) {
-    this.parentForm =  this.formBuilder.group({
+    this.parentForm = this.formBuilder.group({
       name: new FormControl(''),
       age: new FormControl(''),
       email: new FormControl(''),
       gender: new FormControl(''),
     });
-   }
+  }
 
   ngOnInit(): void {
   }
 
-
   submitForm() {
-    // Handle form submission if needed
+    if (this.parentForm.valid) {
+      this.submittedData = this.parentForm.value;
+    }
+    console.log( this.submittedData);
+    
   }
 
   showChildComponent() {
-    this.showChild = true;
+    this.showChild = true;   
   }
 
 }

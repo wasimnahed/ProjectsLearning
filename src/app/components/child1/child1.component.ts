@@ -8,15 +8,11 @@ import { Component, Input, OnInit } from '@angular/core';
 export class Child1Component implements OnInit {
 
   @Input() childData: any;
-  fields: string[] = ['name', 'age', 'email', 'gender'];
+ 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  ngOnChanges(changes: any) {
-    if (changes.childData && changes.childData.currentValue) {
-      console.log('Data:', changes.childData.currentValue);
-    }
-  }
+ 
 }
