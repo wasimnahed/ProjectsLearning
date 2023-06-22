@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Tutorial } from '../model/tutorial.model';
 
-// const baseUrl = 'http://localhost:4000/api/users/';
+
 const baseUrl ='http://localhost:3000/user';
 @Injectable({
   providedIn: 'root'
@@ -31,12 +31,4 @@ export class TutorialService {
   delete(id: any): Observable<any> {
     return this.http.delete(`${baseUrl}/${id}`);
   }
-
-  deleteAll(): Observable<any> {
-    return this.http.delete(baseUrl);
-  }
-
-  // findByTitle(title: any): Observable<Tutorial[]> {
-  //   return this.http.get<Tutorial[]>(`${baseUrl}?title=${title}`);
-  // }
 }

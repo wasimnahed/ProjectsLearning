@@ -12,7 +12,7 @@ export class AddTutorialComponent implements OnInit {
   tutorial: Tutorial = {
     title: '',
     description: '',
-    published: false
+    // published: false
   };
   submitted = false;
 
@@ -42,7 +42,7 @@ export class AddTutorialComponent implements OnInit {
     this.tutorial = {
       title: '',
       description: '',
-      published: false
+      // published: false
     };
   }
 
