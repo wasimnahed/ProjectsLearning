@@ -28,6 +28,9 @@ import { MatCardModule } from '@angular/material/card';
 import { PasswordConfirmpasswordComponent } from './components/password-confirmpassword/password-confirmpassword.component';
 import { Child1Component } from './components/child1/child1.component';
 import { Child2Component } from './components/parent1/child2.component';
+import { Child3Component } from './components/child3/child3.component';
+import { Parent3Component } from './components/parent3/parent3.component';
+
 
 
 // import { MatCardContactModule } from '@angular/material/card';
@@ -52,6 +55,9 @@ import { Child2Component } from './components/parent1/child2.component';
     PasswordConfirmpasswordComponent,
     Child1Component,
     Child2Component,
+    Child3Component,
+    Parent3Component,
+    
   
     
   

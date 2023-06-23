@@ -13,6 +13,8 @@ import { AddTutorialComponent } from './components/add-tutorial/add-tutorial.com
 import { PasswordConfirmpasswordComponent } from './components/password-confirmpassword/password-confirmpassword.component';
 import { TakeUntilComponent } from './Observable-operators/take-until/take-until.component';
 import { Child2Component } from './components/parent1/child2.component';
+import { Parent3Component } from './components/parent3/parent3.component';
+
 
 const routes: Routes = [
   {
@@ -67,6 +69,10 @@ const routes: Routes = [
   {
     path:'child2',
     component:Child2Component
+  },
+  {
+    path:'parent3',
+    component:Parent3Component
   },
 
 
