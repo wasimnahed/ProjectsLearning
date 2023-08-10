@@ -30,6 +30,7 @@ import { Child1Component } from './components/child1/child1.component';
 import { Child2Component } from './components/parent1/child2.component';
 import { Child3Component } from './components/child3/child3.component';
 import { Parent3Component } from './components/parent3/parent3.component';
+import { ShallowDeepComponent } from './components/shallow-deep/shallow-deep.component';
 
 
 
@@ -57,6 +58,7 @@ import { Parent3Component } from './components/parent3/parent3.component';
     Child2Component,
     Child3Component,
     Parent3Component,
+    ShallowDeepComponent,
     
   
     

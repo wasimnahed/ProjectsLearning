@@ -14,6 +14,7 @@ import { PasswordConfirmpasswordComponent } from './components/password-confirmp
 import { TakeUntilComponent } from './Observable-operators/take-until/take-until.component';
 import { Child2Component } from './components/parent1/child2.component';
 import { Parent3Component } from './components/parent3/parent3.component';
+import { ShallowDeepComponent } from './components/shallow-deep/shallow-deep.component';
 
 
 const routes: Routes = [
@@ -74,7 +75,10 @@ const routes: Routes = [
     path:'parent3',
     component:Parent3Component
   },
-
+  {
+    path:'shallow-deep',
+    component:ShallowDeepComponent
+  },
 
 ];
 

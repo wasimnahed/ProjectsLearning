@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {  EventEmitter, Output } from '@angular/core';
+import { EventEmitter, Output } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 @Component({
   selector: 'app-child3',
@@ -18,6 +18,7 @@ export class Child3Component implements OnInit {
   }
 
   ngOnInit(): void {
+   
   }
 
   submitForm() {
@@ -26,5 +27,9 @@ export class Child3Component implements OnInit {
       this.childDataEvent.emit(formData);
     }
   }
+
+
+
+
 
 }
